@@ -1,0 +1,45 @@
+<title></title>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       {% load staticfiles %}
+       <link rel="stylesheet" type="text/css" href="{% static 'session_words/style.css' %}">
+</head>
+<body>
+
+<div class="box">
+
+<div class="forms">
+
+<h1>Add a New Word</h1>
+
+  <form action="add_word" method="POST">
+    <input type="text" name="theword">
+    {% csrf_token %}
+    <p>Choose a Color</p>
+
+    <!-- <input type="radio" name="color" value="red" checked> Red<br>
+    <input type="radio" name="color" value="green"> Green<br>
+    <input type="radio" name="color" value="blue"> Blue <br><br>
+
+    <input type="checkbox" name="big" value="big"> show in BIG fonts!<br><br> -->
+
+    <input type="submit" name="submit" value="Add to Session">
+
+  </form>
+
+  </div>
+
+</div>
+
+
+<div class="box">
+
+<a href="/clear"><button>Clear Session</button></a>
+
+
+
+
+</div>
+
+
+</body>
